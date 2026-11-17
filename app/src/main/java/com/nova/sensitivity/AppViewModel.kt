@@ -130,7 +130,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         store.saveProfiles(profiles)
     }
 
-    fun setTheme(mode: ThemeMode) {
+    fun updateTheme(mode: ThemeMode) {
         theme = mode
         store.saveTheme(mode)
     }

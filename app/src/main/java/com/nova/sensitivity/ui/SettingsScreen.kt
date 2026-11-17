@@ -50,7 +50,7 @@ fun SettingsScreen(vm: AppViewModel, pad: PaddingValues) {
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.values().forEach { mode ->
-                    NovaCard(Modifier.fillMaxWidth(), onClick = { vm.setTheme(mode) }) {
+                    NovaCard(Modifier.fillMaxWidth(), onClick = { vm.updateTheme(mode) }) {
                         Row(Modifier.padding(horizontal = 8.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                             RadioButton(selected = vm.theme == mode, onClick = null, modifier = Modifier.padding(12.dp))
                             Text(mode.label, style = MaterialTheme.typography.titleMedium)
